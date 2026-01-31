@@ -94,6 +94,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--glass-border);
+    gap: var(--space-md);
 }
 
 .logo {
@@ -538,6 +539,18 @@ h4 {
         left: 14px !important;
     }
 
+    /* Fix showcase visibility/spacing if needed */
+    .section {
+        padding: 4rem 5%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        word-break: break-word;
+    }
 }
 
 /* Lightbox Modal - MASTER Styles */
