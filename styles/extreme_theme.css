@@ -1,0 +1,319 @@
+/* Extreme Theme Overrides */
+
+/* --- 1. Particle Background Canvas --- */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Behind everything */
+    pointer-events: none;
+    /* Allow clicks through */
+}
+
+/* --- 2. Custom Magnetic Cursor --- */
+#cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-primary);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
+    mix-blend-mode: difference;
+}
+
+#cursor.hovered {
+    width: 50px;
+    height: 50px;
+    background: rgba(99, 102, 241, 0.2);
+    border-color: transparent;
+    backdrop-filter: blur(2px);
+}
+
+/* Hide default cursor only on non-touch devices */
+@media (pointer: fine) {
+    body {
+        cursor: none;
+    }
+
+    a,
+    button,
+    .cert-card,
+    .project-card,
+    input,
+    textarea {
+        cursor: none;
+    }
+}
+
+
+/* --- 3. Spotlight Cards --- */
+/* Base styles must allow for the "border" trick */
+.cert-card,
+.project-card,
+.education-card,
+.skill-category {
+    position: relative;
+    background: rgba(20, 20, 22, 0.8);
+    /* Darker base */
+    overflow: hidden;
+    /* The shine effect needs isolation */
+}
+
+/* The Shine Layer */
+.cert-card::before,
+.project-card::before,
+.education-card::before,
+.skill-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.06),
+            transparent 40%);
+    z-index: 1;
+    pointer-events: none;
+    /* Let clicks pass */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* The Border Glow Layer */
+.cert-card::after,
+.project-card::after,
+.education-card::after,
+.skill-category::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+            rgba(99, 102, 241, 0.4),
+            transparent 40%);
+    z-index: 0;
+    /* Behind content */
+    opacity: 0;
+    transition: opacity 0.5s;
+    /* Use mask to show only border? Or just overlay */
+}
+
+/* Show on Hover */
+.cert-card:hover::before,
+.project-card:hover::before,
+.education-card:hover::before,
+.skill-category:hover::before {
+    opacity: 1;
+}
+
+
+/* --- 4. Glitch Effect for Title --- */
+.hero-title {
+    position: relative;
+}
+
+.hero-title::before,
+.hero-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+}
+
+.hero-title::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.hero-title::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(48px, 9999px, 86px, 0);
+    }
+
+    5% {
+        clip: rect(32px, 9999px, 8px, 0);
+    }
+
+    10% {
+        clip: rect(2px, 9999px, 89px, 0);
+    }
+
+    15% {
+        clip: rect(97px, 9999px, 3px, 0);
+    }
+
+    20% {
+        clip: rect(61px, 9999px, 48px, 0);
+    }
+
+    25% {
+        clip: rect(18px, 9999px, 5px, 0);
+    }
+
+    30% {
+        clip: rect(28px, 9999px, 20px, 0);
+    }
+
+    35% {
+        clip: rect(81px, 9999px, 84px, 0);
+    }
+
+    40% {
+        clip: rect(48px, 9999px, 66px, 0);
+    }
+
+    45% {
+        clip: rect(63px, 9999px, 32px, 0);
+    }
+
+    50% {
+        clip: rect(72px, 9999px, 55px, 0);
+    }
+
+    55% {
+        clip: rect(8px, 9999px, 66px, 0);
+    }
+
+    60% {
+        clip: rect(66px, 9999px, 7px, 0);
+    }
+
+    65% {
+        clip: rect(100px, 9999px, 91px, 0);
+    }
+
+    70% {
+        clip: rect(22px, 9999px, 37px, 0);
+    }
+
+    75% {
+        clip: rect(7px, 9999px, 35px, 0);
+    }
+
+    80% {
+        clip: rect(66px, 9999px, 41px, 0);
+    }
+
+    85% {
+        clip: rect(38px, 9999px, 78px, 0);
+    }
+
+    90% {
+        clip: rect(34px, 9999px, 14px, 0);
+    }
+
+    95% {
+        clip: rect(98px, 9999px, 3px, 0);
+    }
+
+    100% {
+        clip: rect(16px, 9999px, 47px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(62px, 9999px, 14px, 0);
+    }
+
+    5% {
+        clip: rect(87px, 9999px, 3px, 0);
+    }
+
+    10% {
+        clip: rect(90px, 9999px, 52px, 0);
+    }
+
+    15% {
+        clip: rect(98px, 9999px, 52px, 0);
+    }
+
+    20% {
+        clip: rect(22px, 9999px, 24px, 0);
+    }
+
+    25% {
+        clip: rect(87px, 9999px, 51px, 0);
+    }
+
+    30% {
+        clip: rect(33px, 9999px, 40px, 0);
+    }
+
+    35% {
+        clip: rect(4px, 9999px, 93px, 0);
+    }
+
+    40% {
+        clip: rect(13px, 9999px, 15px, 0);
+    }
+
+    45% {
+        clip: rect(51px, 9999px, 17px, 0);
+    }
+
+    50% {
+        clip: rect(73px, 9999px, 83px, 0);
+    }
+
+    55% {
+        clip: rect(46px, 9999px, 69px, 0);
+    }
+
+    60% {
+        clip: rect(56px, 9999px, 97px, 0);
+    }
+
+    65% {
+        clip: rect(84px, 9999px, 74px, 0);
+    }
+
+    70% {
+        clip: rect(28px, 9999px, 70px, 0);
+    }
+
+    75% {
+        clip: rect(21px, 9999px, 84px, 0);
+    }
+
+    80% {
+        clip: rect(72px, 9999px, 15px, 0);
+    }
+
+    85% {
+        clip: rect(42px, 9999px, 13px, 0);
+    }
+
+    90% {
+        clip: rect(81px, 9999px, 89px, 0);
+    }
+
+    95% {
+        clip: rect(27px, 9999px, 77px, 0);
+    }
+
+    100% {
+        clip: rect(34px, 9999px, 15px, 0);
+    }
+}
