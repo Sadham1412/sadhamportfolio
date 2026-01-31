@@ -2,11 +2,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navContainer = document.querySelector('.nav-container');
+    const navCloseBtn = document.querySelector('.nav-close-btn');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function toggleMenu() {
+        mobileMenuBtn.classList.toggle('active');
+        navContainer.classList.toggle('active');
+        document.body.style.overflow = navContainer.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+        mobileMenuBtn.classList.remove('active');
+        navContainer.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 
     if (mobileMenuBtn && navContainer) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            navContainer.classList.toggle('active');
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        if (navCloseBtn) {
+            navCloseBtn.addEventListener('click', closeMenu);
+        }
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
     }
 
@@ -64,27 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observerItems.forEach(el => revealObserver.observe(el));
 
-    // 4. Lightbox Logic
-    window.openLightbox = function (src, cap) {
-        const lb = document.getElementById('lightbox');
-        const img = document.getElementById('lightbox-img');
-        const caption = document.getElementById('lightbox-caption');
-        if (lb && img) {
-            img.src = src;
-            caption.textContent = cap;
-            lb.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-    };
-
-    window.closeLightbox = function () {
-        const lb = document.getElementById('lightbox');
-        if (lb) {
-            lb.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    };
-
     // 5. Cursor Glow
     const cursorGlow = document.querySelector('.cursor-glow');
     document.addEventListener('mousemove', (e) => {
@@ -132,3 +131,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/**
+ * Global Lightbox Functions
+ * Defined outside DOMContentLoaded to ensure availability
+ */
+window.openLightbox = function (src, cap) {
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const caption = document.getElementById('lightbox-caption');
+
+    if (lb && img) {
+        img.src = src;
+        caption.textContent = cap || "";
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        console.log("Lightbox triggered for:", src);
+    } else {
+        console.error("Lightbox DOM elements missing!");
+    }
+};
+
+window.closeLightbox = function () {
+    const lb = document.getElementById('lightbox');
+    if (lb) {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};

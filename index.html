@@ -26,6 +26,34 @@
     <div class="cursor-glow"></div>
     <canvas id="bg-canvas"></canvas> <!-- Particle Background -->
 
+    <!-- Lightbox Modal - Bulletproof Setup -->
+    <script>
+        // Critical: Defined at the top for instant availability
+        function openLightbox(src, cap) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            if (lb && img) {
+                img.src = src;
+                caption.textContent = cap || "";
+                lb.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            if (lb) {
+                lb.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" onclick="event.stopPropagation()">
+        <div id="lightbox-caption"></div>
+    </div>
+
     <header class="navbar">
         <a href="#hero" class="logo">Sadham.Dev</a>
         <!-- Rest of navbar -->
@@ -34,8 +62,9 @@
             <span class="bar"></span>
         </button>
         <nav class="nav-container">
+            <button class="nav-close-btn" aria-label="Close Menu">&times;</button>
             <ul class="nav-links">
-                <li><a href="#hero">Home</li></a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -216,7 +245,7 @@
             <div class="cert-grid">
                 <!-- Cert 1 -->
                 <div class="cert-card reveal">
-                    <div class="cert-thumb" onclick="openLightbox('', 'Frontend Development')">
+                    <div class="cert-thumb">
                         <div class="cert-overlay"><i class="devicon-react-original"></i> View Certificate</div>
                         <i class="devicon-react-original colored" style="font-size: 5rem;"></i>
                     </div>
@@ -227,7 +256,7 @@
                 </div>
                 <!-- Cert 2 -->
                 <div class="cert-card reveal" style="transition-delay: 0.1s">
-                    <div class="cert-thumb" onclick="openLightbox('', 'Cloud Computing')">
+                    <div class="cert-thumb">
                         <div class="cert-overlay"><i class="devicon-amazonwebservices-plain"></i> View Certificate</div>
                         <i class="devicon-amazonwebservices-plain-wordmark colored" style="font-size: 5rem;"></i>
                     </div>
@@ -238,7 +267,7 @@
                 </div>
                 <!-- Cert 3: Python -->
                 <div class="cert-card reveal" style="transition-delay: 0.2s">
-                    <div class="cert-thumb" onclick="openLightbox('', 'Python Programming')">
+                    <div class="cert-thumb">
                         <div class="cert-overlay"><i class="devicon-python-plain"></i> View Certificate</div>
                         <i class="devicon-python-plain colored" style="font-size: 5rem;"></i>
                     </div>
@@ -249,7 +278,7 @@
                 </div>
                 <!-- Cert 4: Software Testing -->
                 <div class="cert-card reveal" style="transition-delay: 0.3s">
-                    <div class="cert-thumb" onclick="openLightbox('', 'Software Testing')">
+                    <div class="cert-thumb">
                         <div class="cert-overlay"><i class="devicon-devicon-plain"></i> View Certificate</div>
                         <i class="devicon-devicon-plain colored" style="font-size: 5rem;"></i>
                         <!-- Generic coding icon or selenium/java if wanted. Using generic for now -->
@@ -261,7 +290,7 @@
                 </div>
                 <!-- Cert 5: UI/UX -->
                 <div class="cert-card reveal" style="transition-delay: 0.4s">
-                    <div class="cert-thumb" onclick="openLightbox('', 'UI/UX Design')">
+                    <div class="cert-thumb">
                         <div class="cert-overlay"><i class="devicon-figma-plain"></i> View Certificate</div>
                         <i class="devicon-figma-plain colored" style="font-size: 5rem;"></i>
                     </div>
@@ -306,7 +335,140 @@
         </section>
 
         <section id="work" class="section">
-            <h2 class="section-title reveal">Key Projects</h2>
+            <h2 class="section-title reveal">UI/UX Design Showcase</h2>
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/foodbar_ui.jpg', 'Foodbar Delivery UI')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/foodbar_ui.jpg" alt="Foodbar UI Design"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Foodbar Delivery</h3>
+                        <p>A clean, modern healthy food delivery interface focusing on visual hierarchy and user
+                            engagement.</p>
+                        <div class="tags"><span>UI/UX Design</span><span>Figma</span><span>Mobile First</span></div>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/ecommerce_ui.jpg', 'EVNX Adventure E-commerce UI')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/ecommerce_ui.jpg" alt="EVNX Adventure E-commerce"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>EVNX Adventure</h3>
+                        <p>High-performance e-commerce UI for premium motorcycle gear with a bold, dark aesthetic.</p>
+                        <div class="tags"><span>E-commerce</span><span>Visual Design</span><span>Branding</span></div>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/coffee_ui.jpg', 'Coffee Delight Product UI')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/coffee_ui.jpg" alt="Coffee Delight UI"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Coffee Delight</h3>
+                        <p>Aromatic landing page design for a premium coffee brand, emphasizing warmth and quality.</p>
+                        <div class="tags"><span>Landing Page</span><span>Product Design</span><span>UI</span></div>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/icecream_ui.jpg', 'Blackberry Bliss UI')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/icecream_ui.jpg" alt="Blackberry Bliss UI"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Blackberry Bliss</h3>
+                        <p>Minimalist and elegant dessert showcase design focusing on high-quality product photography.
+                        </p>
+                        <div class="tags"><span>Minimalism</span><span>Food UI</span><span>Typography</span></div>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/hotdog_ui.jpg', 'Lunch Combo Promotional UI')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/hotdog_ui.jpg" alt="Lunch Combo UI"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Lunch Combo Promo</h3>
+                        <p>Vibrant and energetic promotional UI design for fast-food services and special offers.</p>
+                        <div class="tags"><span>Promotion</span><span>Marketing Design</span><span>UX</span></div>
+                    </div>
+                </article>
+
+                <!-- New Project: Strawberry Energy -->
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/strawberry_energy.jpg', 'Strawberry Splash Energy Drink')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/strawberry_energy.jpg" alt="Strawberry Energy Design"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Strawberry Splash</h3>
+                        <p>Vibrant energy drink packaging and promotional UI concept focused on fresh appeal.</p>
+                        <div class="tags"><span>Packaging</span><span>Promotion</span><span>Visual</span></div>
+                    </div>
+                </article>
+
+                <!-- New Project: Modern House -->
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/modern_house.jpg', 'Modern Real Estate Promo')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/modern_house.jpg" alt="Modern House Design"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Living</h3>
+                        <p>Sleek real estate social media and web promo design for luxury housing markets.</p>
+                        <div class="tags"><span>Real Estate</span><span>Marketing</span><span>Social</span></div>
+                    </div>
+                </article>
+
+                <!-- New Project: Pineapple Boba -->
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/pineapple_boba.jpg', 'Pineapple Popping Boba')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/pineapple_boba.jpg" alt="Pineapple Boba Design"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Popping Boba</h3>
+                        <p>Refreshing beverage branding and product showcase design with playful elements.</p>
+                        <div class="tags"><span>Branding</span><span>Product</span><span>Beverage</span></div>
+                    </div>
+                </article>
+
+                <!-- New Project: Sprite Design -->
+                <article class="project-card reveal">
+                    <div class="project-image"
+                        onclick="openLightbox('assets/projects/sprite_design.jpg', 'Fresh Sprite Concept')"
+                        style="cursor: pointer; background: #1a1a1c;">
+                        <img src="assets/projects/sprite_design.jpg" alt="Sprite Concept Design"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Sprite Fresh</h3>
+                        <p>Dynamic and cooling product UI concept for a classic carbonated beverage.</p>
+                        <div class="tags"><span>Concept</span><span>Visual Design</span><span>Fresh</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="realtime-projects" class="section">
+            <h2 class="section-title reveal">Real-time Application Projects</h2>
             <div class="projects-grid">
                 <article class="project-card reveal">
                     <div class="project-image">
@@ -400,15 +562,10 @@
     </main>
 
     <footer style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--glass-border); margin-top: 4rem;">
-        <p>&copy; 2026 Sadham.Dev. All rights reserved.</p>
+        <p>&copy; 2026 Sadham.Dev ❤️ All rights reserved.</p>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div id="lightbox-caption"></div>
-    </div>
+
 
     <script src="scripts/main.js"></script>
 </body>
