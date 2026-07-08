@@ -13,43 +13,8 @@
     /* Allow clicks through */
 }
 
-/* --- 2. Custom Magnetic Cursor --- */
-#cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--accent-primary);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
-    mix-blend-mode: difference;
-}
+/* --- 2. Custom Magnetic Cursor Removed --- */
 
-#cursor.hovered {
-    width: 50px;
-    height: 50px;
-    background: rgba(99, 102, 241, 0.2);
-    border-color: transparent;
-    backdrop-filter: blur(2px);
-}
-
-/* Hide default cursor only on non-touch devices */
-@media (pointer: fine) {
-    body {
-        cursor: none;
-    }
-
-    a,
-    button,
-    .cert-card,
-    .project-card,
-    input,
-    textarea {
-        cursor: none;
-    }
-}
 
 
 /* --- 3. Spotlight Cards --- */
@@ -104,6 +69,7 @@
     /* Behind content */
     opacity: 0;
     transition: opacity 0.5s;
+    pointer-events: none;
     /* Use mask to show only border? Or just overlay */
 }
 
