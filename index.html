@@ -1,763 +1,900 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sadham Hussain — Creative Technologist & Developer</title>
-  <meta name="description" content="Portfolio of Sadham Hussain — Creative Technologist, Software Developer, Python Backend Specialist, UI/UX Designer & Freelancer.">
-  <meta name="author"      content="Sadham Hussain">
-  <meta property="og:title"       content="Sadham Hussain — Portfolio">
-  <meta property="og:description" content="Premium portfolio of a Creative Technologist building world-class digital experiences.">
-  <meta property="og:type"        content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadham Hussain — Creative Technologist & Developer</title>
+    <meta name="description"
+        content="Portfolio of Sadham Hussain — Creative Technologist, Software Developer, Python Backend Specialist, UI/UX Designer & Freelancer.">
+    <meta name="author" content="Sadham Hussain">
+    <meta property="og:title" content="Sadham Hussain — Portfolio">
+    <meta property="og:description"
+        content="Premium portfolio of a Creative Technologist building world-class digital experiences.">
+    <meta property="og:type" content="website">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<canvas id="bg-canvas"></canvas>
-<div class="bg-blobs" aria-hidden="true">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-</div>
+    <canvas id="bg-canvas"></canvas>
+    <div class="bg-blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
-<header id="header-nav">
-  <a href="#home" class="nav-brand">Sadham<span>.Dev</span></a>
+    <header id="header-nav">
+        <a href="#home" class="nav-brand">Sadham<span>.Dev</span></a>
 
-  <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-    <span></span><span></span><span></span>
-  </button>
-</header>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
 
-<nav id="nav-menu" class="nav-menu">
-  <a href="#home"           class="nav-item active">Home</a>
-  <a href="#about"          class="nav-item">About</a>
-  <a href="#education"      class="nav-item">Education</a>
-  <a href="#experience"     class="nav-item">Experience</a>
-  <a href="#skills"         class="nav-item">Skills</a>
-  <a href="#certifications" class="nav-item">Certifications</a>
-  <a href="#projects"       class="nav-item">Projects</a>
-  <a href="#contact"        class="nav-item">Contact</a>
-</nav>
+        <nav id="nav-menu" class="nav-menu">
+            <a href="#home" class="nav-item active">Home</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#education" class="nav-item">Education</a>
+            <a href="#experience" class="nav-item">Experience</a>
+            <a href="#skills" class="nav-item">Skills</a>
+            <a href="#certifications" class="nav-item">Certifications</a>
+            <a href="#projects" class="nav-item">Projects</a>
+            <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+    </header>
 
-<main class="container">
+    <main class="container">
 
-  <section id="home">
-    <div class="hero-grid">
+        <section id="home">
+            <div class="hero-grid">
 
-      <div class="hero-left">
-        <div class="hero-badge sr">
-          <span class="dot"></span> Creative Technologist
-        </div>
+                <div class="hero-left">
+                    <div class="hero-badge sr">
+                        <span class="dot"></span> Creative Technologist
+                    </div>
 
-        <h1 class="sr sr-d1">
-          Hi, I'm<br>
-          <span class="gradient-text">Sadham Hussain</span>
-        </h1>
+                    <h1 class="sr sr-d1">
+                        Hi, I'm<br>
+                        <span class="gradient-text">Sadham Hussain</span>
+                    </h1>
 
-        <div class="hero-role-line sr sr-d2">
-          I'm a&nbsp;<em id="typewriter"></em>
-        </div>
+                    <div class="hero-role-line sr sr-d2">
+                        I'm a&nbsp;<em id="typewriter"></em>
+                    </div>
 
-        <p class="hero-bio sr sr-d3">
-          Highly motivated developer passionate about crafting pixel-perfect, premium digital
-          experiences and high-performance Python backend architectures. Specialising in Django,
-          modern frontend engineering, and user-centric UI/UX design.
+                    <p class="hero-bio sr sr-d3">
+                        Highly motivated developer passionate about crafting pixel-perfect, premium digital
+                        experiences and high-performance Python backend architectures. Specialising in Django,
+                        modern frontend engineering, and user-centric UI/UX design.
+                    </p>
+
+                    <div class="hero-ctas sr sr-d4">
+                        <a href="#projects" class="btn btn-primary">
+                            View Projects
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                        <a href="assets/resume%202026.pdf" class="btn btn-secondary" download>
+                            Download CV
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3 19h18v2H3v-2zm10-5.828L16.95 9.22l1.414 1.414L12 17 5.636 10.636 7.05 9.22 11 13.172V2h2v11.172z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials sr sr-d5">
+                        <span class="label">Find me on</span>
+                        <div class="socials-row">
+                            <a href="https://github.com/Sadham1412" target="_blank" class="social-chip"
+                                aria-label="GitHub">
+                                <i class="devicon-github-original"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sadham-hussain-b12971245" target="_blank"
+                                class="social-chip" aria-label="LinkedIn">
+                                <i class="devicon-linkedin-plain" style="color:#0A66C2"></i>
+                            </a>
+                            <a href="mailto:sadhamhussain.cbcs@gmail.com" class="social-chip" aria-label="Email">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-chip" aria-label="Instagram">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="orbit-wrapper">
+                        <div class="orbit-glow"></div>
+                        <div class="orbit-ring r1"></div>
+                        <div class="orbit-ring r2"></div>
+                        <div class="orbit-ring r3"></div>
+                        <div class="orbit-particle p1"></div>
+                        <div class="orbit-particle p2"></div>
+                        <div class="orbit-particle p3"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="scroll-cue" aria-hidden="true">
+                <span>Scroll Down</span>
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <section id="stats" class="section-wrapper" style="padding-top:2rem;padding-bottom:4rem;">
+            <div class="stats-grid">
+                <div class="stat-card sr">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-number" data-target="4" data-suffix="+">0</div>
+                    <div class="stat-label">Real-World Projects</div>
+                </div>
+                <div class="stat-card sr sr-d1">
+                    <div class="stat-icon">🏅</div>
+                    <div class="stat-number" data-target="6" data-suffix="+">0</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-card sr sr-d2">
+                    <div class="stat-icon">🎓</div>
+                    <div class="stat-number" data-target="8.26">0</div>
+                    <div class="stat-label">Post-Grad CGPA</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-wrapper">
+            <div class="glass-panel sr">
+                <div class="about-grid">
+                    <div class="about-left">
+                        <p class="about-eyebrow">Who I Am</p>
+                        <h3>Crafting Digital<br>Experiences</h3>
+                        <p>
+                            I am a designer and developer who loves transforming ideas into interactive, user-friendly
+                            solutions. Holding an MCA from B.S. Abdur Rahman Crescent Institute (8.26 CGPA), I focus
+                            on clean, scalable Python backends, premium UI architectures, and performance-driven
+                            frontends.
+                        </p>
+                        <p>
+                            My work is inspired by the elegance of Apple, the minimalism of Linear, and the animation
+                            richness of Framer — and I aim to bring that same quality to every project I touch.
+                        </p>
+                    </div>
+                    <div class="about-right">
+                        <div class="degree-cards">
+                            <div class="degree-card sr sr-d1">
+                                <div class="degree-emoji">🎓</div>
+                                <div class="degree-title">MCA</div>
+                                <div class="degree-sub">Master of Computer Applications</div>
+                                <div class="degree-gpa">8.26 CGPA</div>
+                            </div>
+                            <div class="degree-card sr sr-d2">
+                                <div class="degree-emoji">🎓</div>
+                                <div class="degree-title">BCA</div>
+                                <div class="degree-sub">Bachelor of Computer Applications</div>
+                                <div class="degree-gpa">8.13 CGPA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-wrapper">
+            <div class="section-header sr">
+                <span class="eyebrow">Academic Background</span>
+                <h2>Education</h2>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card sr">
+                    <div class="edu-icon">🏛️</div>
+                    <div class="edu-body">
+                        <div class="edu-header">
+                            <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
+                            <span class="edu-year">2023 – 2025</span>
+                        </div>
+                        <p class="edu-inst">B.S. Abdur Rahman Crescent Institute of Science & Technology, Chennai</p>
+                        <div class="edu-cgpa">CGPA Secured: <strong>8.26</strong></div>
+                    </div>
+                </div>
+                <div class="edu-card sr sr-d1">
+                    <div class="edu-icon">🏫</div>
+                    <div class="edu-body">
+                        <div class="edu-header">
+                            <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
+                            <span class="edu-year">2020 – 2023</span>
+                        </div>
+                        <p class="edu-inst">Bharath Institute of Higher Education and Research, Chennai</p>
+                        <div class="edu-cgpa">CGPA Secured: <strong>8.13</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-wrapper">
+            <div class="section-header sr">
+                <span class="eyebrow">My Experience</span>
+                <h2>Professional Journey</h2>
+            </div>
+
+            <div class="timeline-wrap">
+                <div class="timeline-track" aria-hidden="true"></div>
+                <div class="timeline-progress" aria-hidden="true"></div>
+
+                <div class="timeline-item sr">
+                    <div class="tl-node" aria-hidden="true"></div>
+                    <div class="tl-card">
+                        <div class="tl-main">
+                            <span class="tl-period">Apr – Jun 2026</span>
+                            <div class="tl-role">Freelance Full Stack Developer</div>
+                            <div class="tl-company">GiftHub Marketplace</div>
+                            <p class="tl-desc">
+                                Designed and deployed GiftHub — a premium digital gift-card marketplace with secure
+                                bidding,
+                                dynamic brand APIs, payment gateway integration, product management dashboard, and
+                                automated
+                                user notifications. Built with Django + Bootstrap 5.
+                            </p>
+                        </div>
+                        <div class="tl-icon"><i class="devicon-django-plain colored"></i></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item sr sr-d1">
+                    <div class="tl-node" aria-hidden="true"></div>
+                    <div class="tl-card">
+                        <div class="tl-main">
+                            <span class="tl-period">Aug – Sep 2025</span>
+                            <div class="tl-role">Software Testing Intern</div>
+                            <div class="tl-company">Besant Technology</div>
+                            <p class="tl-desc">
+                                Executed manual and automated testing across multiple application modules. Worked on
+                                LinkedIn
+                                Optimization project — analysed profile performance, wrote comprehensive test scenarios,
+                                and
+                                improved application quality and reliability.
+                            </p>
+                        </div>
+                        <div class="tl-icon"><i class="devicon-selenium-original colored"></i></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item sr sr-d2">
+                    <div class="tl-node" aria-hidden="true"></div>
+                    <div class="tl-card">
+                        <div class="tl-main">
+                            <span class="tl-period">Jun – Jul 2024</span>
+                            <div class="tl-role">Frontend Developer Intern</div>
+                            <div class="tl-company">IBM SkillBuild</div>
+                            <p class="tl-desc">
+                                Developed responsive web interfaces using HTML5, CSS3 and JavaScript. Improved UI
+                                performance,
+                                fixed cross-browser inconsistencies, and enhanced accessibility across devices for
+                                multiple
+                                web projects.
+                            </p>
+                        </div>
+                        <div class="tl-icon"><i class="devicon-html5-plain colored"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="section-wrapper">
+            <div class="section-header sr">
+                <span class="eyebrow">My Stack</span>
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-card sr">
+                    <div class="skill-card-title"><span>Languages & Web</span></div>
+                    <div class="skill-icons">
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-html5-plain colored"></i></div><span
+                                class="sk-tip">HTML5</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-css3-plain colored"></i></div><span
+                                class="sk-tip">CSS3</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-javascript-plain colored"></i></div><span
+                                class="sk-tip">JavaScript</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-python-plain colored"></i></div><span
+                                class="sk-tip">Python</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-django-plain colored"></i></div><span
+                                class="sk-tip">Django</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-react-original colored"></i></div><span
+                                class="sk-tip">React</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-bootstrap-plain colored"></i></div><span
+                                class="sk-tip">Bootstrap</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-mysql-plain colored"></i></div><span
+                                class="sk-tip">MySQL/SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card sr sr-d1">
+                    <div class="skill-card-title"><span>Design Tools</span></div>
+                    <div class="skill-icons">
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-figma-plain colored"></i></div><span
+                                class="sk-tip">Figma</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-photoshop-plain colored"></i></div><span
+                                class="sk-tip">Photoshop</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-illustrator-plain colored"></i></div><span
+                                class="sk-tip">Illustrator</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-xd-plain colored"></i></div><span
+                                class="sk-tip">After Effects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card sr sr-d2">
+                    <div class="skill-card-title"><span>Development</span></div>
+                    <div class="skill-icons">
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-git-plain colored"></i></div><span
+                                class="sk-tip">Git</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-github-original"></i></div><span
+                                class="sk-tip">GitHub</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-vscode-plain colored"></i></div><span
+                                class="sk-tip">VS Code</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-firebase-plain colored"></i></div><span
+                                class="sk-tip">Firebase</span>
+                        </div>
+                        <div class="sk">
+                            <div class="sk-wrap"><i class="devicon-mysql-plain colored"></i></div><span
+                                class="sk-tip">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="certifications" class="section-wrapper">
+            <div class="section-header sr">
+                <span class="eyebrow">Credentials & Research</span>
+                <h2>Certifications & Publications</h2>
+            </div>
+            <div class="certs-layout">
+
+                <div class="certs-grid">
+                    <div class="cert-card sr">
+                        <div class="cert-top">
+                            <div class="cert-icon"><i class="devicon-html5-plain colored"></i></div>
+                            <div>
+                                <div class="cert-name">Frontend Development</div>
+                                <div class="cert-issuer">IBM SkillsBuild</div>
+                            </div>
+                        </div>
+                        <div class="cert-bottom">
+                            <button class="cert-view-btn"
+                                onclick="openModal('assets/certificates/AICTE B1 PD 1-972-705.pdf','Frontend Development — IBM SkillsBuild')">View
+                                Certificate</button>
+                            <span class="cert-year">2024</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card sr sr-d1">
+                        <div class="cert-top">
+                            <div class="cert-icon"><i class="devicon-googlecloud-plain colored"></i></div>
+                            <div>
+                                <div class="cert-name">Cloud Computing</div>
+                                <div class="cert-issuer">NPTEL</div>
+                            </div>
+                        </div>
+                        <div class="cert-bottom">
+                            <button class="cert-view-btn"
+                                onclick="openModal('assets/certificates/Cloud Computing (1).pdf','Cloud Computing — NPTEL')">View
+                                Certificate</button>
+                            <span class="cert-year">2024</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card sr sr-d2">
+                        <div class="cert-top">
+                            <div class="cert-icon"><i class="devicon-python-plain colored"></i></div>
+                            <div>
+                                <div class="cert-name">Python Programming</div>
+                                <div class="cert-issuer">Coursera</div>
+                            </div>
+                        </div>
+                        <div class="cert-bottom">
+                            <button class="cert-view-btn"
+                                onclick="openModal('assets/certificates/Python-Certificate-1 (1).pdf','Python Programming — Coursera')">View
+                                Certificate</button>
+                            <span class="cert-year">2024</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card sr sr-d3">
+                        <div class="cert-top">
+                            <div class="cert-icon"><i class="devicon-selenium-original colored"></i></div>
+                            <div>
+                                <div class="cert-name">Software Testing</div>
+                                <div class="cert-issuer">Besant Technology</div>
+                            </div>
+                        </div>
+                        <div class="cert-bottom">
+                            <button class="cert-view-btn"
+                                onclick="openModal('assets/certificates/software testing certificate.jpeg','Software Testing — Besant Technology')">View
+                                Certificate</button>
+                            <span class="cert-year">2025</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card sr sr-d4">
+                        <div class="cert-top">
+                            <div class="cert-icon"><i class="devicon-tensorflow-original colored"></i></div>
+                            <div>
+                                <div class="cert-name">Machine Learning</div>
+                                <div class="cert-issuer">EduSkills / AICTE</div>
+                            </div>
+                        </div>
+                        <div class="cert-bottom">
+                            <button class="cert-view-btn"
+                                onclick="openModal('assets/certificates/Completion Certificate _ SkillsBuild.PDF','Machine Learning — AICTE')">View
+                                Certificate</button>
+                            <span class="cert-year">2024</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card sr sr-d5">
+                        <div class="cert-top">
+                            <div class="cert-icon"><i class="devicon-figma-plain colored"></i></div>
+                            <div>
+                                <div class="cert-name">UI/UX Design</div>
+                                <div class="cert-issuer">Coursera</div>
+                            </div>
+                        </div>
+                        <div class="cert-bottom">
+                            <button class="cert-view-btn"
+                                onclick="openModal('assets/certificates/Sadham Hussain.pdf','UI/UX Design — Coursera')">View
+                                Certificate</button>
+                            <span class="cert-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sr sr-d2">
+                    <div class="journal-card">
+                        <div>
+                            <div class="journal-icon-big">📄</div>
+                            <h3>Real-Time Action Identification System Using ML with OpenCV and Fall Detection</h3>
+                            <div class="journal-meta">
+                                Published in: <strong>Tanz Journal</strong><br>
+                                ISSN: <strong>TANJ (1369-7720)</strong><br>
+                                DOI/Ref: <strong>TJ1882A</strong>
+                            </div>
+                        </div>
+                        <a href="https://tanzj.net/wp-content/uploads/2025/04/5-TJ1882A.pdf" target="_blank"
+                            class="btn btn-primary" style="justify-content:center;">
+                            Read Publication
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.414l-7 7L10.586 12l7-7H13V3h8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="section-wrapper">
+            <div class="section-header sr">
+                <span class="eyebrow">Visual Showcase & Code</span>
+                <h2>UI Projects</h2>
+            </div>
+
+            <div class="sr">
+                <div class="sub-section-label">
+                    UI/UX Design Showcase <span class="tag">Figma · Photoshop</span>
+                </div>
+                <div class="ui-grid">
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/foodbar_ui.jpg','Foodbar — Food Delivery UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/foodbar_ui.jpg" alt="Foodbar UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Foodbar</div>
+                            <div class="ui-sub">Food Delivery App Concept</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/coffee_ui.jpg','Coffee Delight — Coffee Brand UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/coffee_ui.jpg" alt="Coffee Delight UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Coffee Delight</div>
+                            <div class="ui-sub">Premium Coffee Shop Concept</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/ecommerce_ui.jpg','EVNX Adventure — Motorcycle Gear Store')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/ecommerce_ui.jpg" alt="EVNX Adventure UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">EVNX Adventure</div>
+                            <div class="ui-sub">E-Commerce Landing Design</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/resort_ui.jpg','Fintech Dashboard — Finance Application UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/resort_ui.jpg" alt="Fintech Dashboard UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Fintech Dashboard</div>
+                            <div class="ui-sub">Finance Application UI</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/hotdog_ui.jpg','Lunch Combo — Hot Dog Combo Ordering UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/hotdog_ui.jpg" alt="Lunch Combo UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Lunch Combo</div>
+                            <div class="ui-sub">Hot Dog Combo Ordering UI</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/icecream_ui.jpg','Blackberry Bliss — Ice Cream & Dessert UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/icecream_ui.jpg" alt="Blackberry Bliss UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Blackberry Bliss</div>
+                            <div class="ui-sub">Ice Cream & Dessert UI</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/modern_house.jpg','Modern Estate — Premium Real Estate Portal UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/modern_house.jpg" alt="Modern Estate UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Modern Estate</div>
+                            <div class="ui-sub">Real Estate Portal UI</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/pineapple_boba.jpg','Pineapple Boba — Bubble Tea Delivery UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/pineapple_boba.jpg" alt="Pineapple Boba UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Pineapple Boba</div>
+                            <div class="ui-sub">Bubble Tea Delivery UI</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/sprite_design.jpg','Sprite Rebrand — Soda Landing Page UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/sprite_design.jpg" alt="Sprite Rebrand UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Sprite Rebrand</div>
+                            <div class="ui-sub">Soda Landing Page UI</div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card"
+                        onclick="openModal('assets/projects/strawberry_energy.jpg','Strawberry Energy — Energy Drink Brand UI')">
+                        <div class="ui-thumb">
+                            <img src="assets/projects/strawberry_energy.jpg" alt="Strawberry Energy UI" loading="lazy">
+                            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
+                        </div>
+                        <div class="ui-info">
+                            <div class="ui-title">Strawberry Energy</div>
+                            <div class="ui-sub">Energy Drink Brand UI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sr">
+                <div class="sub-section-label">
+                    Real-World Applications <span class="tag">Live Projects</span>
+                </div>
+                <div class="real-grid">
+
+                    <div class="real-card">
+                        <div class="real-body">
+                            <div class="badge-row">
+                                <span class="badge badge-purple">Freelance</span>
+                                <span class="badge badge-purple">Python</span>
+                                <span class="badge badge-purple">Django</span>
+                                <span class="badge badge-purple">MySQL</span>
+                            </div>
+                            <div class="real-title">GiftHub Marketplace</div>
+                            <p class="real-desc">
+                                A highly optimised digital gift-card marketplace allowing users to securely purchase,
+                                trade,
+                                bid on, and sell gift cards. Configured transactional notifications, integrated
+                                Razorpay,
+                                and built a custom analytics dashboard.
+                            </p>
+                        </div>
+                        <div class="real-media">
+                            <img src="assets/projects/gifthub_mockup.png" alt="GiftHub Marketplace" loading="lazy">
+                        </div>
+                        <div class="real-actions">
+                            <a href="https://www.gifthub.sale/" target="_blank" class="btn btn-primary">
+                                Live Demo
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.414l-7 7L10.586 12l7-7H13V3h8z" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Sadham1412" target="_blank" class="btn btn-secondary">GitHub
+                                →</a>
+                        </div>
+                    </div>
+
+                    <div class="real-card">
+                        <div class="real-body">
+                            <div class="badge-row">
+                                <span class="badge badge-blue">Python</span>
+                                <span class="badge badge-blue">OpenCV</span>
+                                <span class="badge badge-blue">ML</span>
+                                <span class="badge badge-blue">Streamlit</span>
+                            </div>
+                            <div class="real-title">Real-Time Action Recognition</div>
+                            <p class="real-desc">
+                                A computer vision application for real-time fall detection using MediaPipe pose
+                                estimation.
+                                Triggers instant WhatsApp/SMS alerts and includes a modern admin control panel.
+                                Published
+                                as a research paper in Tanz Journal.
+                            </p>
+                        </div>
+                        <div class="real-media">
+                            <img src="https://i.postimg.cc/63kJCGGd/fall-detection-home.webp"
+                                alt="Fall Detection System" loading="lazy">
+                        </div>
+                        <div class="real-actions">
+                            <a href="https://github.com/Sadham1412" target="_blank" class="btn btn-primary">Live
+                                Demo</a>
+                            <a href="https://github.com/Sadham1412" target="_blank" class="btn btn-secondary">GitHub
+                                →</a>
+                        </div>
+                    </div>
+
+                    <div class="real-card">
+                        <div class="real-body">
+                            <div class="badge-row">
+                                <span class="badge badge-purple">XML</span>
+                                <span class="badge badge-purple">Java</span>
+                                <span class="badge badge-purple">Firebase</span>
+                                <span class="badge badge-purple">Android</span>
+                            </div>
+                            <div class="real-title">Online Auction System</div>
+                            <p class="real-desc">
+                                A native Android bidding application designed using XML and Java, featuring real-time
+                                bidding notifications,
+                                live countdown timers, and synchronous database updates powered by Firebase Realtime
+                                Database.
+                            </p>
+                        </div>
+                        <div class="real-media">
+                            <img src="assets/projects/online_auction_ui.png" alt="Online Auction System" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="real-card">
+                        <div class="real-body">
+                            <div class="badge-row">
+                                <span class="badge badge-blue">Python</span>
+                                <span class="badge badge-blue">OpenCV</span>
+                                <span class="badge badge-blue">MediaPipe</span>
+                                <span class="badge badge-blue">PyAutoGUI</span>
+                            </div>
+                            <div class="real-title">Gesture Control Interface</div>
+                            <p class="real-desc">
+                                A computer vision script translating hand coordinates into operating system commands,
+                                allowing hands-free
+                                volume adjustment, page scrolling, and desktop navigation using hand tracking.
+                            </p>
+                        </div>
+                        <div class="real-media">
+                            <img src="assets/projects/gesture_control_ui.png" alt="Gesture Control Interface"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-wrapper">
+            <div class="glass-panel sr">
+                <div class="section-header" style="margin-bottom:3rem;">
+                    <span class="eyebrow">Get In Touch</span>
+                    <h2>Let's Collaborate</h2>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-info sr">
+                        <div class="ci-item">
+                            <div class="ci-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="ci-label">Email</div>
+                                <div class="ci-value"><a
+                                        href="mailto:sadhamhussain.cbcs@gmail.com">sadhamhussain.cbcs@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="ci-label">Phone</div>
+                                <div class="ci-value"><a href="tel:+917448439991">+91 74484 39991</a></div>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="ci-label">Location</div>
+                                <div class="ci-value">Chennai, Tamil Nadu, India</div>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon">
+                                <i class="devicon-github-original" style="font-size:1.15rem;"></i>
+                            </div>
+                            <div>
+                                <div class="ci-label">GitHub</div>
+                                <div class="ci-value"><a href="https://github.com/Sadham1412"
+                                        target="_blank">github.com/Sadham1412</a></div>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon">
+                                <i class="devicon-linkedin-plain" style="font-size:1.15rem;color:#0A66C2;"></i>
+                            </div>
+                            <div>
+                                <div class="ci-label">LinkedIn</div>
+                                <div class="ci-value"><a href="https://www.linkedin.com/in/sadham-hussain-b12971245"
+                                        target="_blank">Sadham Hussain</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sr sr-d1">
+                        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit"
+                            method="POST">
+                            <input type="hidden" name="access_key" value="0c55b288-c8c0-4552-a129-b3c7ed704ade">
+                            <input type="hidden" name="subject" value="New message from portfolio contact form">
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <input type="text" id="name" name="name" placeholder=" " required>
+                                    <label for="name">Your Name</label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
+                                    <label for="email">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <textarea id="message" name="message" placeholder=" " required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="justify-content:center;">
+                                Send Message
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634L21.075 2.06c.542-.18.82.1.64.64L15.32 21.848c-.178.537-.458.53-.632.008L11.5 12.5l-9.554-3.185z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="mailto:sadhamhussain.cbcs@gmail.com" class="fab" aria-label="Send Email">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
+    </a>
+
+    <footer>
+        <div class="footer-glow" aria-hidden="true"></div>
+        <p class="footer-text">
+            &copy; 2026 Sadham.Dev &nbsp;·&nbsp; All rights reserved. &nbsp;·&nbsp;
+            Designed &amp; Built with ❤️ by <strong style="color:#fff">Sadham Hussain</strong>
         </p>
+    </footer>
 
-        <div class="hero-ctas sr sr-d4">
-          <a href="#projects" class="btn btn-primary">
-            View Projects
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/>
-            </svg>
-          </a>
-          <a href="#contact"   class="btn btn-secondary">Let's Talk</a>
-          <a href="assets/resume%202026.pdf" class="btn btn-secondary" download>
-            Download CV
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 19h18v2H3v-2zm10-5.828L16.95 9.22l1.414 1.414L12 17 5.636 10.636 7.05 9.22 11 13.172V2h2v11.172z"/>
-            </svg>
-          </a>
-        </div>
-
-        <div class="hero-socials sr sr-d5">
-          <span class="label">Find me on</span>
-          <div class="socials-row">
-            <a href="https://github.com/Sadham1412" target="_blank" class="social-chip" aria-label="GitHub">
-              <i class="devicon-github-original"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/sadham-hussain-b12971245" target="_blank" class="social-chip" aria-label="LinkedIn">
-              <i class="devicon-linkedin-plain" style="color:#0A66C2"></i>
-            </a>
-            <a href="mailto:sadhamhussain.cbcs@gmail.com" class="social-chip" aria-label="Email">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="social-chip" aria-label="Instagram">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="orbit-wrapper">
-          <div class="orbit-glow"></div>
-          <div class="orbit-ring r1"></div>
-          <div class="orbit-ring r2"></div>
-          <div class="orbit-ring r3"></div>
-          <div class="orbit-particle p1"></div>
-          <div class="orbit-particle p2"></div>
-          <div class="orbit-particle p3"></div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="scroll-cue" aria-hidden="true">
-      <span>Scroll Down</span>
-      <div class="mouse"></div>
-    </div>
-  </section>
-
-  <section id="stats" class="section-wrapper" style="padding-top:2rem;padding-bottom:4rem;">
-    <div class="stats-grid">
-      <div class="stat-card sr">
-        <div class="stat-icon">🚀</div>
-        <div class="stat-number" data-target="4" data-suffix="+">0</div>
-        <div class="stat-label">Real-World Projects</div>
-      </div>
-      <div class="stat-card sr sr-d1">
-        <div class="stat-icon">🏅</div>
-        <div class="stat-number" data-target="6" data-suffix="+">0</div>
-        <div class="stat-label">Certifications</div>
-      </div>
-      <div class="stat-card sr sr-d2">
-        <div class="stat-icon">🎓</div>
-        <div class="stat-number" data-target="8.26">0</div>
-        <div class="stat-label">Post-Grad CGPA</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section-wrapper">
-    <div class="glass-panel sr">
-      <div class="about-grid">
-        <div class="about-left">
-          <p class="about-eyebrow">Who I Am</p>
-          <h3>Crafting Digital<br>Experiences</h3>
-          <p>
-            I am a designer and developer who loves transforming ideas into interactive, user-friendly
-            solutions. Holding an MCA from B.S. Abdur Rahman Crescent Institute (8.26 CGPA), I focus
-            on clean, scalable Python backends, premium UI architectures, and performance-driven
-            frontends.
-          </p>
-          <p>
-            My work is inspired by the elegance of Apple, the minimalism of Linear, and the animation
-            richness of Framer — and I aim to bring that same quality to every project I touch.
-          </p>
-        </div>
-        <div class="about-right">
-          <div class="degree-cards">
-            <div class="degree-card sr sr-d1">
-              <div class="degree-emoji">🎓</div>
-              <div class="degree-title">MCA</div>
-              <div class="degree-sub">Master of Computer Applications</div>
-              <div class="degree-gpa">8.26 CGPA</div>
-            </div>
-            <div class="degree-card sr sr-d2">
-              <div class="degree-emoji">🎓</div>
-              <div class="degree-title">BCA</div>
-              <div class="degree-sub">Bachelor of Computer Applications</div>
-              <div class="degree-gpa">8.13 CGPA</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="section-wrapper">
-    <div class="section-header sr">
-      <span class="eyebrow">Academic Background</span>
-      <h2>Education</h2>
-    </div>
-    <div class="edu-grid">
-      <div class="edu-card sr">
-        <div class="edu-icon">🏛️</div>
-        <div class="edu-body">
-          <div class="edu-header">
-            <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
-            <span class="edu-year">2023 – 2025</span>
-          </div>
-          <p class="edu-inst">B.S. Abdur Rahman Crescent Institute of Science & Technology, Chennai</p>
-          <div class="edu-cgpa">CGPA Secured: <strong>8.26</strong></div>
-        </div>
-      </div>
-      <div class="edu-card sr sr-d1">
-        <div class="edu-icon">🏫</div>
-        <div class="edu-body">
-          <div class="edu-header">
-            <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
-            <span class="edu-year">2020 – 2023</span>
-          </div>
-          <p class="edu-inst">Bharath Institute of Higher Education and Research, Chennai</p>
-          <div class="edu-cgpa">CGPA Secured: <strong>8.13</strong></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="section-wrapper">
-    <div class="section-header sr">
-      <span class="eyebrow">My Experience</span>
-      <h2>Professional Journey</h2>
-    </div>
-
-    <div class="timeline-wrap">
-      <div class="timeline-track" aria-hidden="true"></div>
-      <div class="timeline-progress" aria-hidden="true"></div>
-
-      <div class="timeline-item sr">
-        <div class="tl-node" aria-hidden="true"></div>
-        <div class="tl-card">
-          <div class="tl-main">
-            <span class="tl-period">Apr – Jun 2026</span>
-            <div class="tl-role">Freelance Full Stack Developer</div>
-            <div class="tl-company">GiftHub Marketplace</div>
-            <p class="tl-desc">
-              Designed and deployed GiftHub — a premium digital gift-card marketplace with secure bidding,
-              dynamic brand APIs, payment gateway integration, product management dashboard, and automated
-              user notifications. Built with Django + Bootstrap 5.
-            </p>
-          </div>
-          <div class="tl-icon"><i class="devicon-django-plain colored"></i></div>
-        </div>
-      </div>
-
-      <div class="timeline-item sr sr-d1">
-        <div class="tl-node" aria-hidden="true"></div>
-        <div class="tl-card">
-          <div class="tl-main">
-            <span class="tl-period">Aug – Sep 2025</span>
-            <div class="tl-role">Software Testing Intern</div>
-            <div class="tl-company">Besant Technology</div>
-            <p class="tl-desc">
-              Executed manual and automated testing across multiple application modules. Worked on LinkedIn
-              Optimization project — analysed profile performance, wrote comprehensive test scenarios, and
-              improved application quality and reliability.
-            </p>
-          </div>
-          <div class="tl-icon"><i class="devicon-selenium-original colored"></i></div>
-        </div>
-      </div>
-
-      <div class="timeline-item sr sr-d2">
-        <div class="tl-node" aria-hidden="true"></div>
-        <div class="tl-card">
-          <div class="tl-main">
-            <span class="tl-period">Jun – Jul 2024</span>
-            <div class="tl-role">Frontend Developer Intern</div>
-            <div class="tl-company">IBM SkillBuild</div>
-            <p class="tl-desc">
-              Developed responsive web interfaces using HTML5, CSS3 and JavaScript. Improved UI performance,
-              fixed cross-browser inconsistencies, and enhanced accessibility across devices for multiple
-              web projects.
-            </p>
-          </div>
-          <div class="tl-icon"><i class="devicon-html5-plain colored"></i></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="skills" class="section-wrapper">
-    <div class="section-header sr">
-      <span class="eyebrow">My Stack</span>
-      <h2>Technical Skills</h2>
-    </div>
-    <div class="skills-grid">
-
-      <div class="skill-card sr">
-        <div class="skill-card-title"><span>Languages & Web</span></div>
-        <div class="skill-icons">
-          <div class="sk"><div class="sk-wrap"><i class="devicon-html5-plain colored"></i></div><span class="sk-tip">HTML5</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-css3-plain colored"></i></div><span class="sk-tip">CSS3</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-javascript-plain colored"></i></div><span class="sk-tip">JavaScript</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-python-plain colored"></i></div><span class="sk-tip">Python</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-django-plain colored"></i></div><span class="sk-tip">Django</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-react-original colored"></i></div><span class="sk-tip">React</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-bootstrap-plain colored"></i></div><span class="sk-tip">Bootstrap</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-mysql-plain colored"></i></div><span class="sk-tip">MySQL/SQL</span></div>
-        </div>
-      </div>
-
-      <div class="skill-card sr sr-d1">
-        <div class="skill-card-title"><span>Design Tools</span></div>
-        <div class="skill-icons">
-          <div class="sk"><div class="sk-wrap"><i class="devicon-figma-plain colored"></i></div><span class="sk-tip">Figma</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-photoshop-plain colored"></i></div><span class="sk-tip">Photoshop</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-illustrator-plain colored"></i></div><span class="sk-tip">Illustrator</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-xd-plain colored"></i></div><span class="sk-tip">After Effects</span></div>
-        </div>
-      </div>
-
-      <div class="skill-card sr sr-d2">
-        <div class="skill-card-title"><span>Development</span></div>
-        <div class="skill-icons">
-          <div class="sk"><div class="sk-wrap"><i class="devicon-git-plain colored"></i></div><span class="sk-tip">Git</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-github-original"></i></div><span class="sk-tip">GitHub</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-vscode-plain colored"></i></div><span class="sk-tip">VS Code</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-firebase-plain colored"></i></div><span class="sk-tip">Firebase</span></div>
-          <div class="sk"><div class="sk-wrap"><i class="devicon-mysql-plain colored"></i></div><span class="sk-tip">MySQL</span></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="certifications" class="section-wrapper">
-    <div class="section-header sr">
-      <span class="eyebrow">Credentials & Research</span>
-      <h2>Certifications & Publications</h2>
-    </div>
-    <div class="certs-layout">
-
-      <div class="certs-grid">
-        <div class="cert-card sr">
-          <div class="cert-top">
-            <div class="cert-icon"><i class="devicon-html5-plain colored"></i></div>
-            <div><div class="cert-name">Frontend Development</div><div class="cert-issuer">IBM SkillsBuild</div></div>
-          </div>
-          <div class="cert-bottom">
-            <button class="cert-view-btn" onclick="openModal('assets/certificates/AICTE B1 PD 1-972-705.pdf','Frontend Development — IBM SkillsBuild')">View Certificate</button>
-            <span class="cert-year">2024</span>
-          </div>
-        </div>
-
-        <div class="cert-card sr sr-d1">
-          <div class="cert-top">
-            <div class="cert-icon"><i class="devicon-googlecloud-plain colored"></i></div>
-            <div><div class="cert-name">Cloud Computing</div><div class="cert-issuer">NPTEL</div></div>
-          </div>
-          <div class="cert-bottom">
-            <button class="cert-view-btn" onclick="openModal('assets/certificates/Cloud Computing (1).pdf','Cloud Computing — NPTEL')">View Certificate</button>
-            <span class="cert-year">2024</span>
-          </div>
-        </div>
-
-        <div class="cert-card sr sr-d2">
-          <div class="cert-top">
-            <div class="cert-icon"><i class="devicon-python-plain colored"></i></div>
-            <div><div class="cert-name">Python Programming</div><div class="cert-issuer">Coursera</div></div>
-          </div>
-          <div class="cert-bottom">
-            <button class="cert-view-btn" onclick="openModal('assets/certificates/Python-Certificate-1 (1).pdf','Python Programming — Coursera')">View Certificate</button>
-            <span class="cert-year">2024</span>
-          </div>
-        </div>
-
-        <div class="cert-card sr sr-d3">
-          <div class="cert-top">
-            <div class="cert-icon"><i class="devicon-selenium-original colored"></i></div>
-            <div><div class="cert-name">Software Testing</div><div class="cert-issuer">Besant Technology</div></div>
-          </div>
-          <div class="cert-bottom">
-            <button class="cert-view-btn" onclick="openModal('assets/certificates/software testing certificate.jpeg','Software Testing — Besant Technology')">View Certificate</button>
-            <span class="cert-year">2025</span>
-          </div>
-        </div>
-
-        <div class="cert-card sr sr-d4">
-          <div class="cert-top">
-            <div class="cert-icon"><i class="devicon-tensorflow-original colored"></i></div>
-            <div><div class="cert-name">Machine Learning</div><div class="cert-issuer">EduSkills / AICTE</div></div>
-          </div>
-          <div class="cert-bottom">
-            <button class="cert-view-btn" onclick="openModal('assets/certificates/Completion Certificate _ SkillsBuild.PDF','Machine Learning — AICTE')">View Certificate</button>
-            <span class="cert-year">2024</span>
-          </div>
-        </div>
-
-        <div class="cert-card sr sr-d5">
-          <div class="cert-top">
-            <div class="cert-icon"><i class="devicon-figma-plain colored"></i></div>
-            <div><div class="cert-name">UI/UX Design</div><div class="cert-issuer">Coursera</div></div>
-          </div>
-          <div class="cert-bottom">
-            <button class="cert-view-btn" onclick="openModal('assets/certificates/Sadham Hussain.pdf','UI/UX Design — Coursera')">View Certificate</button>
-            <span class="cert-year">2024</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sr sr-d2">
-        <div class="journal-card">
-          <div>
-            <div class="journal-icon-big">📄</div>
-            <h3>Real-Time Action Identification System Using ML with OpenCV and Fall Detection</h3>
-            <div class="journal-meta">
-              Published in: <strong>Tanz Journal</strong><br>
-              ISSN: <strong>TANJ (1369-7720)</strong><br>
-              DOI/Ref: <strong>TJ1882A</strong>
-            </div>
-          </div>
-          <a href="https://tanzj.net/wp-content/uploads/2025/04/5-TJ1882A.pdf" target="_blank" class="btn btn-primary" style="justify-content:center;">
-            Read Publication
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.414l-7 7L10.586 12l7-7H13V3h8z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="projects" class="section-wrapper">
-    <div class="section-header sr">
-      <span class="eyebrow">Visual Showcase & Code</span>
-      <h2>UI Projects</h2>
-    </div>
-
-    <div class="sr">
-      <div class="sub-section-label">
-        UI/UX Design Showcase <span class="tag">Figma · Photoshop</span>
-      </div>
-      <div class="ui-grid">
-        <div class="ui-card" onclick="openModal('assets/projects/foodbar_ui.jpg','Foodbar — Food Delivery UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/foodbar_ui.jpg" alt="Foodbar UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Foodbar</div>
-            <div class="ui-sub">Food Delivery App Concept</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/coffee_ui.jpg','Coffee Delight — Coffee Brand UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/coffee_ui.jpg" alt="Coffee Delight UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Coffee Delight</div>
-            <div class="ui-sub">Premium Coffee Shop Concept</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/ecommerce_ui.jpg','EVNX Adventure — Motorcycle Gear Store')">
-          <div class="ui-thumb">
-            <img src="assets/projects/ecommerce_ui.jpg" alt="EVNX Adventure UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">EVNX Adventure</div>
-            <div class="ui-sub">E-Commerce Landing Design</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/resort_ui.jpg','Fintech Dashboard — Finance Application UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/resort_ui.jpg" alt="Fintech Dashboard UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Fintech Dashboard</div>
-            <div class="ui-sub">Finance Application UI</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/hotdog_ui.jpg','Lunch Combo — Hot Dog Combo Ordering UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/hotdog_ui.jpg" alt="Lunch Combo UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Lunch Combo</div>
-            <div class="ui-sub">Hot Dog Combo Ordering UI</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/icecream_ui.jpg','Blackberry Bliss — Ice Cream & Dessert UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/icecream_ui.jpg" alt="Blackberry Bliss UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Blackberry Bliss</div>
-            <div class="ui-sub">Ice Cream & Dessert UI</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/modern_house.jpg','Modern Estate — Premium Real Estate Portal UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/modern_house.jpg" alt="Modern Estate UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Modern Estate</div>
-            <div class="ui-sub">Real Estate Portal UI</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/pineapple_boba.jpg','Pineapple Boba — Bubble Tea Delivery UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/pineapple_boba.jpg" alt="Pineapple Boba UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Pineapple Boba</div>
-            <div class="ui-sub">Bubble Tea Delivery UI</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/sprite_design.jpg','Sprite Rebrand — Soda Landing Page UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/sprite_design.jpg" alt="Sprite Rebrand UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Sprite Rebrand</div>
-            <div class="ui-sub">Soda Landing Page UI</div>
-          </div>
-        </div>
-
-        <div class="ui-card" onclick="openModal('assets/projects/strawberry_energy.jpg','Strawberry Energy — Energy Drink Brand UI')">
-          <div class="ui-thumb">
-            <img src="assets/projects/strawberry_energy.jpg" alt="Strawberry Energy UI" loading="lazy">
-            <div class="ui-hover-overlay"><button class="ui-zoom-icon">🔍</button></div>
-          </div>
-          <div class="ui-info">
-            <div class="ui-title">Strawberry Energy</div>
-            <div class="ui-sub">Energy Drink Brand UI</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="sr">
-      <div class="sub-section-label">
-        Real-World Applications <span class="tag">Live Projects</span>
-      </div>
-      <div class="real-grid">
-
-        <div class="real-card">
-          <div class="real-body">
-            <div class="badge-row">
-              <span class="badge badge-purple">Freelance</span>
-              <span class="badge badge-purple">Python</span>
-              <span class="badge badge-purple">Django</span>
-              <span class="badge badge-purple">MySQL</span>
-            </div>
-            <div class="real-title">GiftHub Marketplace</div>
-            <p class="real-desc">
-              A highly optimised digital gift-card marketplace allowing users to securely purchase, trade,
-              bid on, and sell gift cards. Configured transactional notifications, integrated Razorpay,
-              and built a custom analytics dashboard.
-            </p>
-          </div>
-          <div class="real-media">
-            <img src="assets/projects/gifthub_mockup.png" alt="GiftHub Marketplace" loading="lazy">
-          </div>
-          <div class="real-actions">
-            <a href="https://www.gifthub.sale/" target="_blank" class="btn btn-primary">
-              Live Demo
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.414l-7 7L10.586 12l7-7H13V3h8z"/></svg>
-            </a>
-            <a href="https://github.com/Sadham1412" target="_blank" class="btn btn-secondary">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="real-card">
-          <div class="real-body">
-            <div class="badge-row">
-              <span class="badge badge-blue">Python</span>
-              <span class="badge badge-blue">OpenCV</span>
-              <span class="badge badge-blue">ML</span>
-              <span class="badge badge-blue">Streamlit</span>
-            </div>
-            <div class="real-title">Real-Time Action Recognition</div>
-            <p class="real-desc">
-              A computer vision application for real-time fall detection using MediaPipe pose estimation.
-              Triggers instant WhatsApp/SMS alerts and includes a modern admin control panel. Published
-              as a research paper in Tanz Journal.
-            </p>
-          </div>
-          <div class="real-media">
-            <img src="https://i.postimg.cc/63kJCGGd/fall-detection-home.webp" alt="Fall Detection System" loading="lazy">
-          </div>
-          <div class="real-actions">
-            <a href="https://github.com/Sadham1412" target="_blank" class="btn btn-primary">Live Demo</a>
-            <a href="https://github.com/Sadham1412" target="_blank" class="btn btn-secondary">GitHub →</a>
-          </div>
-        </div>
-
-        <div class="real-card">
-          <div class="real-body">
-            <div class="badge-row">
-              <span class="badge badge-purple">XML</span>
-              <span class="badge badge-purple">Java</span>
-              <span class="badge badge-purple">Firebase</span>
-              <span class="badge badge-purple">Android</span>
-            </div>
-            <div class="real-title">Online Auction System</div>
-            <p class="real-desc">
-              A native Android bidding application designed using XML and Java, featuring real-time bidding notifications, 
-              live countdown timers, and synchronous database updates powered by Firebase Realtime Database.
-            </p>
-          </div>
-          <div class="real-media">
-            <img src="assets/projects/online_auction_ui.png" alt="Online Auction System" loading="lazy">
-          </div>
-        </div>
-
-        <div class="real-card">
-          <div class="real-body">
-            <div class="badge-row">
-              <span class="badge badge-blue">Python</span>
-              <span class="badge badge-blue">OpenCV</span>
-              <span class="badge badge-blue">MediaPipe</span>
-              <span class="badge badge-blue">PyAutoGUI</span>
-            </div>
-            <div class="real-title">Gesture Control Interface</div>
-            <p class="real-desc">
-              A computer vision script translating hand coordinates into operating system commands, allowing hands-free 
-              volume adjustment, page scrolling, and desktop navigation using hand tracking.
-            </p>
-          </div>
-          <div class="real-media">
-            <img src="assets/projects/gesture_control_ui.png" alt="Gesture Control Interface" loading="lazy">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section-wrapper">
-    <div class="glass-panel sr">
-      <div class="section-header" style="margin-bottom:3rem;">
-        <span class="eyebrow">Get In Touch</span>
-        <h2>Let's Collaborate</h2>
-      </div>
-
-      <div class="contact-grid">
-        
-        <div class="contact-info sr">
-          <div class="ci-item">
-            <div class="ci-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-            </div>
-            <div>
-              <div class="ci-label">Email</div>
-              <div class="ci-value"><a href="mailto:sadhamhussain.cbcs@gmail.com">sadhamhussain.cbcs@gmail.com</a></div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
-              </svg>
-            </div>
-            <div>
-              <div class="ci-label">Phone</div>
-              <div class="ci-value"><a href="tel:+917448439991">+91 74484 39991</a></div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-              </svg>
-            </div>
-            <div>
-              <div class="ci-label">Location</div>
-              <div class="ci-value">Chennai, Tamil Nadu, India</div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">
-              <i class="devicon-github-original" style="font-size:1.15rem;"></i>
-            </div>
-            <div>
-              <div class="ci-label">GitHub</div>
-              <div class="ci-value"><a href="https://github.com/Sadham1412" target="_blank">github.com/Sadham1412</a></div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">
-              <i class="devicon-linkedin-plain" style="font-size:1.15rem;color:#0A66C2;"></i>
-            </div>
-            <div>
-              <div class="ci-label">LinkedIn</div>
-              <div class="ci-value"><a href="https://www.linkedin.com/in/sadham-hussain-b12971245" target="_blank">Sadham Hussain</a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sr sr-d1">
-          <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="0c55b288-c8c0-4552-a129-b3c7ed704ade">
-            <input type="hidden" name="subject"    value="New message from portfolio contact form">
-
-            <div class="form-row">
-              <div class="form-field">
-                <input type="text"  id="name"  name="name"  placeholder=" " required>
-                <label for="name">Your Name</label>
-              </div>
-              <div class="form-field">
-                <input type="email" id="email" name="email" placeholder=" " required>
-                <label for="email">Email Address</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <textarea id="message" name="message" placeholder=" " required></textarea>
-              <label for="message">Your Message</label>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="justify-content:center;">
-              Send Message
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634L21.075 2.06c.542-.18.82.1.64.64L15.32 21.848c-.178.537-.458.53-.632.008L11.5 12.5l-9.554-3.185z"/>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<a href="mailto:sadhamhussain.cbcs@gmail.com" class="fab" aria-label="Send Email">
-  <svg viewBox="0 0 24 24">
-    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-  </svg>
-</a>
-
-<footer>
-  <div class="footer-glow" aria-hidden="true"></div>
-  <p class="footer-text">
-    &copy; 2026 Sadham.Dev &nbsp;·&nbsp; All rights reserved. &nbsp;·&nbsp;
-    Designed &amp; Built with ❤️ by <strong style="color:#fff">Sadham Hussain</strong>
-  </p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

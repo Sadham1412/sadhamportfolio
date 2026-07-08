@@ -327,7 +327,12 @@ button { font-family:inherit; cursor:pointer; border:none }
 
 @media (max-width:899px) {
   .nav-toggle { display:flex }
-  #header-nav { width:calc(100% - 1.5rem); padding:.6rem 1rem }
+  #header-nav {
+    left: 0.75rem;
+    transform: none;
+    width: calc(100% - 1.5rem);
+    padding: .6rem 1rem;
+  }
 
   .nav-menu {
     position: fixed;
